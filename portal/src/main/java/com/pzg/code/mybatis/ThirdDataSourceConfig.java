@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 
 
 @Configuration
-public class SystemDataSourceConfig {
+public class ThirdDataSourceConfig {
 
     @Bean(name = "thirdDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.third")
