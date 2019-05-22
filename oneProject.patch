@@ -1,0 +1,7 @@
+Index: commons/src/main/java/com/pzg/code/commons/service/impl/BaseServiceImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- commons/src/main/java/com/pzg/code/commons/service/impl/BaseServiceImpl.java	(date 1558512291000)
++++ commons/src/main/java/com/pzg/code/commons/service/impl/BaseServiceImpl.java	(date 1558512910966)
