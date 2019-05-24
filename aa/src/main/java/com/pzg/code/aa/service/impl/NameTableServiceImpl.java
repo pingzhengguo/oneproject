@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * @ClassName :  NameTableServiceImpl
@@ -29,7 +29,6 @@ public class NameTableServiceImpl implements NameTableService {
     @Autowired
     private NameTableMapper nameTableMapper;
 
-
     @Override
     public Integer save(NameTable nameTable) {
         nameTableMapper.insert(nameTable);
@@ -45,4 +44,6 @@ public class NameTableServiceImpl implements NameTableService {
     public List<NameTable> getAll() {
         return nameTableMapper.selectAll();
     }
+
+
 }

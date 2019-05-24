@@ -29,13 +29,19 @@ public class AgeTableServiceimpl implements AgeTableService {
     @Override
     public List<AgeTable> selectByExample(String property, List list) {
         Example example = new Example(AgeTable.class);
-//        example.createCriteria().andIn(property, list);
-//        example.createCriteria().andBetween(property, 2, 3);
-//        example.createCriteria().andIn(property, list);
-//        example.createCriteria().andCondition("id >=", 2);
-//        example.createCriteria().andCondition("id <>", 3);
-//        example.createCriteria().andIsNotNull("id");
-        example.createCriteria().andBetween(property, 1, 3).andCondition("id=", 2);
+        Example.Criteria criteria = example.createCriteria();
+
+//        criteria.andIn(property, list);
+//        criteria.andCondition("id >=", 2);
+//        criteria.andCondition("id <>", 3);
+//        criteria.andIsNotNull("id");
+        criteria.andIn(property, list).andBetween(property, 1, 3);
+
+        Example.Criteria criteria2 = example.createCriteria();
+        criteria2.andCondition("id =", 3);
+        criteria2.andCondition("id <", 4);
+        example.or(criteria2);
+
         return ageTableMapper.selectByExample(example);
     }
 

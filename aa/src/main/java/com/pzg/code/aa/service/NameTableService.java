@@ -18,4 +18,6 @@ public interface NameTableService {
 
 
     List<NameTable> getAll();
+
+
 }

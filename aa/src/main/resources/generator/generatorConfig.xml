@@ -62,8 +62,8 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
         <!--  domainObjectName="userTestDTO" table可以有多个,每个数据库中的表都可以写一个table，tableName表示要匹配的数据库表 -->
-        <table tableName="age_table"
-               domainObjectName="AgeTable"
+        <table tableName="user"
+               domainObjectName="User"
                enableCountByExample="true"
                enableUpdateByExample="true"
                enableDeleteByExample="true"
