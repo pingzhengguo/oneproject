@@ -3,6 +3,7 @@ package com.pzg.code.aa.service.impl;
 import com.pzg.code.aa.entity.AgeTable;
 import com.pzg.code.aa.mapper.AgeTableMapper;
 import com.pzg.code.aa.service.AgeTableService;
+import com.pzg.code.commons.conf.TestConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -25,6 +26,8 @@ import java.util.List;
 public class AgeTableServiceimpl implements AgeTableService {
     @Autowired
     private AgeTableMapper ageTableMapper;
+    @Autowired
+    private TestConfig testConfig;
 
     @Override
     public List<AgeTable> selectByExample(String property, List list) {
@@ -66,5 +69,12 @@ public class AgeTableServiceimpl implements AgeTableService {
         example.createCriteria().andIn(property, list);
         return this.ageTableMapper.deleteByExample(example);
     }
+
+    @Override
+    public String getConfig() {
+        String testAddress = testConfig.getTestAddress();
+        return testAddress;
+    }
+
 
 }

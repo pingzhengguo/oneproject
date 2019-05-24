@@ -23,4 +23,6 @@ public interface AgeTableService {
 
     int deleteByExample(List<String> list, String property, Class<AgeTable> clazz);
 
+
+    String getConfig();
 }

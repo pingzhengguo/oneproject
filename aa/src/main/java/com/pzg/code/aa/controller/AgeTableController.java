@@ -2,6 +2,7 @@ package com.pzg.code.aa.controller;
 
 import com.pzg.code.aa.entity.AgeTable;
 import com.pzg.code.aa.service.AgeTableService;
+import com.pzg.code.commons.conf.TestConfig;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -67,6 +68,14 @@ public class AgeTableController {
     @ResponseBody
     public Object getOne(Integer id) {
         return ageTableService.selectByPrimaryKey(id);
+    }
+
+
+    @ApiOperation(value = "getConfig", produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/getConfig", method = RequestMethod.GET)
+    @ResponseBody
+    public Object getConfig() {
+        return ageTableService.getConfig();
     }
 
 
