@@ -18,4 +18,20 @@ public class TestConfig {
     public void setTestAddress(String testAddress) {
         this.testAddress = testAddress;
     }
+
+
+
+    /**
+     * fastDfs的下载地址头
+     */
+    @Value("${fastdfs.address}")
+    private String fastdfsAddress;
+
+    public String getFastdfsAddress() {
+        return fastdfsAddress;
+    }
+
+    public void setFastdfsAddress(String fastdfsAddress) {
+        this.fastdfsAddress = fastdfsAddress;
+    }
 }
