@@ -8,9 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * UUID创建工具类
- * @Author: ZZ
  * @Description:
- * @Date: 2018/11/13 9:27
  * @version
  * @ModifiedBy:
  */
