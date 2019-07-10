@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pzg.code.login.mapper.OrganizationMapper" >
+  <resultMap id="BaseResultMap" type="com.pzg.code.login.entity.Organization" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="og_id" property="ogId" jdbcType="VARCHAR" />
+    <result column="og_name" property="ogName" jdbcType="VARCHAR" />
+    <result column="parent_id" property="parentId" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

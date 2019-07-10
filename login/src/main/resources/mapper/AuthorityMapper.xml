@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pzg.code.login.mapper.AuthorityMapper" >
+  <resultMap id="BaseResultMap" type="com.pzg.code.login.entity.Authority" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="auth_id" property="authId" jdbcType="VARCHAR" />
+    <result column="au_name" property="auName" jdbcType="VARCHAR" />
+    <result column="path" property="path" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
