@@ -84,9 +84,9 @@ public class LoginController {
             String key = enumeration.nextElement();
             session.removeAttribute(key);
         }
-        if (!testConfig.getTestLogin().equals(2)) {
-            return "redirect:/home";
-        }
+//        if (!testConfig.getTestLogin().equals(2)) {
+//            return "redirect:/home";
+//        }
         try {
             userService.outLogin(request, response);
         } catch (Exception e) {
