@@ -19,7 +19,16 @@ public class TestConfig {
         this.testAddress = testAddress;
     }
 
+    @Value("${test.login}")
+    private String testLogin;
 
+    public String getTestLogin() {
+        return testLogin;
+    }
+
+    public void setTestLogin(String testLogin) {
+        this.testLogin = testLogin;
+    }
 
     /**
      * fastDfs的下载地址头

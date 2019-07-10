@@ -9,6 +9,7 @@
         <module>aa</module>
         <module>bb</module>
         <module>cc</module>
+        <module>login</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

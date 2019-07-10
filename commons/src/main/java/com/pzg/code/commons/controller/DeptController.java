@@ -29,13 +29,14 @@ public class DeptController {
     @Autowired
     private DeptMapper deptMapper;
 
-    @RequestMapping(value = "dept/excel", method = RequestMethod.GET)
+    @RequestMapping(value = "/anon/dept/excel", method = RequestMethod.GET)
     @ResponseBody
     public ResultInfo deptExcel() {
         try {
             List<Dept> list = deptMapper.getAll();
+            return ResultInfo.success().build(list);
 //            return FileUtil.createExcelByPOIKit("部门表", list, Dept.class);
-            return FileUtil.createCsv("部门表", list, Dept.class);
+//            return FileUtil.createCsv("部门表", list, Dept.class);
         } catch (Exception e) {
             return ResultInfo.failure("导出Excel失败，请联系网站管理员！");
         }
