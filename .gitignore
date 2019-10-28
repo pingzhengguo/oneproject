@@ -5,3 +5,11 @@
 /commons/*.iml
 /portal/*.iml
 /portal/*.md
+/aa/target/classes/
+/bb/target/classes/
+/cc/target/classes/
+/commons/target/classes/
+/login/target/classes/
+/login/login.iml
+/portal/target/
+/oneproject.iml
